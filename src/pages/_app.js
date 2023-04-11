@@ -8,7 +8,7 @@ import translations from "@/components/translations";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { appWithTranslation } from "next-i18next";
+import { appWithTranslation, useTranslation } from "next-i18next";
 import i18n from "../../i18n";
 
 const publicPixel = localFont({
@@ -28,8 +28,9 @@ const options = {
 
 function App({ Component, pageProps }) {
   const { locale } = useRouter();
+  const { i18n } = useTranslation();
   const t =
-    locale === "en"
+    i18n.language === "en"
       ? function (str) {
           return translations.en[str];
         }

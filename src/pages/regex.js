@@ -21,7 +21,7 @@ function RegexApp({
   const { locale } = useRouter();
   const { i18n } = useTranslation();
 
-  console.log(i18n.language, "klang");
+  // console.log(i18n.language, "klang");
   const t =
     i18n.language === "en"
       ? function (str) {
