@@ -12,7 +12,7 @@ i18n
   .use(initReactI18next)
   .init({
     lng: Cookies.get("i18next") || "en",
-    fallbackLng: "en" || "de",
+    fallbackLng: Cookies.get("i18next") || "en",
     debug: false,
     interpolation: {
       escapeValue: false,
