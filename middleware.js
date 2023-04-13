@@ -12,7 +12,7 @@ export async function middleware(req) {
   ) {
     return;
   }
-  let locale = req.cookies.get("Language")?.value;
+  let locale = req.cookies.get("i18next")?.value;
   if (!locale) {
     if (geo?.country === "DE") {
       locale = "de";

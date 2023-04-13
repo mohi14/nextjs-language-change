@@ -1,17 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
-    locales: ["en", "de"],
     defaultLocale: "en",
-    localeDetection: false,
-    domains: [
-      {
-        domain: "localhost",
-        defaultLocale: "en",
-        http: true,
-      },
-    ],
+    locales: ["en", "de"],
   },
+
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
 };

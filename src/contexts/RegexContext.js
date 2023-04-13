@@ -202,7 +202,7 @@ function RegexProvider({ t, children }) {
     setCurrentProfileData(
       profiles.find((profile) => profile.id === editableProfile)
     );
-    // console.log(currentProfileData);
+    
   }, [editableProfile, profiles]);
 
   useIsomorphicLayoutEffect(() => {

@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import translations from "@/components/translations";
 import { useTranslation } from "react-i18next";
 
-function RegexApp({
+export default function RegexApp({
   showCreateProfileModal,
   handleCloseCreateProfileModal,
   showProfileSettingsModal,
@@ -21,7 +21,7 @@ function RegexApp({
   const { locale } = useRouter();
   const { i18n } = useTranslation();
 
-  // console.log(i18n.language, "klang");
+; 
   const t =
     i18n.language === "en"
       ? function (str) {
@@ -72,5 +72,3 @@ function RegexApp({
     </>
   );
 }
-
-export default RegexApp;
